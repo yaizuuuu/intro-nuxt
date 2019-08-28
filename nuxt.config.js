@@ -72,5 +72,16 @@ export default {
     */
     extend (config, ctx) {
     }
+  },
+
+  // nuxtはデフォルトがhistoryモード
+  // historyモードは#(ハッシュ)によるアクセスではなく, パスを変更して遷移をする
+  // その場合<nuxt-link>以外(更新ボタンやURLをアドレスバーに直打ち)で,
+  // ページにアクセスしようとするとindex.htmlアクセスしないことになるので404になってしまう
+  // generate.fallback = trueにすることで404の場合もindex.htmlにアクセスさせることができる
+  // info) S3などにデプロイするときに404の場合はindex.htmlを配信する
+  generate: {
+    fallback: true,
+    // fallback: 'my-fallback/file.html' // ホスティングサービスで特定のロケーションを指定する必要がある場合
   }
 }
