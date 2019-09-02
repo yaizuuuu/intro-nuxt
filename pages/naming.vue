@@ -5,6 +5,7 @@
 
     <nuxt-link to="/naming/left">Left</nuxt-link>
     <nuxt-link to="/naming/right">Right</nuxt-link>
+    <nuxt-link to="/transition">Transition</nuxt-link>
 
     <hr>
 
