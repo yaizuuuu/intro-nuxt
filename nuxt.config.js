@@ -83,5 +83,26 @@ export default {
   generate: {
     fallback: true,
     // fallback: 'my-fallback/file.html' // ホスティングサービスで特定のロケーションを指定する必要がある場合
+  },
+
+  router: {
+    // name付きの子コンポーネントのルーティング
+    extendRoutes (routes, resolve) {
+      // `/naming` のルーティング
+      const indexIndex = routes.findIndex(route => route.name === 'naming')
+      // `/naming/xxxxx` のルーティング
+      let index = routes[indexIndex].children.findIndex(route => route.name === 'naming-direction')
+      // `/naming/xxxxx` にアクセスされた場合, component(nuxt-child)は以下のコンポーネントを使うように支持
+      routes[indexIndex].children[index] = {
+        ...routes[indexIndex].children[index],
+        components: {
+          default: routes[indexIndex].children[index].component,
+          direction: resolve(__dirname, 'components/Direction.vue'),
+        },
+        chunkNames: {
+          direction: 'components/Direction',
+        }
+      }
+    }
   }
 }
