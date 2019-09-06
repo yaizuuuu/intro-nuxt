@@ -5,3 +5,11 @@
 .page-enter, .page-leave-to {
   opacity: 0;
 }
+
+.another-enter-active, .another-leave-active {
+  transition: opacity 1s;
+}
+.another-enter, .another-leave-active {
+  opacity: 0;
+}
+

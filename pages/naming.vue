@@ -3,9 +3,14 @@
     <nuxt-link to="/">Home page</nuxt-link>
     <h1>direction</h1>
 
-    <nuxt-link to="/naming/left">Left</nuxt-link>
-    <nuxt-link to="/naming/right">Right</nuxt-link>
-    <nuxt-link to="/transition">Transition</nuxt-link>
+    <div>
+      <nuxt-link to="/naming/left">Left</nuxt-link>
+      <nuxt-link to="/naming/right">Right</nuxt-link>
+    </div>
+    <div>
+      <nuxt-link to="/transition">Transition</nuxt-link>
+      <nuxt-link to="/another_transition">Transition</nuxt-link>
+    </div>
 
     <hr>
 
