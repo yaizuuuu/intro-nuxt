@@ -104,6 +104,8 @@ export default {
           direction: 'components/Direction',
         }
       }
-    }
+    },
+    // すべてのmiddleware
+    middleware: 'console_log'
   }
 }
