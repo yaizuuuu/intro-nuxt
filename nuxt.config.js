@@ -42,7 +42,12 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxtjs/axios',
+    // '@nuxtjs/proxy',
   ],
+  // proxy: {
+  //   '/api': 'https://ip-ranges.amazonaws.com/ip-ranges.json',
+  // },
   /*
   ** vuetify module configuration
   ** https://github.com/nuxt-community/vuetify-module

@@ -7,9 +7,14 @@
       <nuxt-link to="/naming/left">Left</nuxt-link>
       <nuxt-link to="/naming/right">Right</nuxt-link>
     </div>
+
     <div>
       <nuxt-link to="/transition">Transition</nuxt-link>
-      <nuxt-link to="/another_transition">Transition</nuxt-link>
+      <nuxt-link to="/another_transition">Another Transition</nuxt-link>
+    </div>
+
+    <div>
+      <nuxt-link to="/hello">Hello</nuxt-link>
     </div>
 
     <hr>
