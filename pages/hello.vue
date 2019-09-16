@@ -26,7 +26,7 @@ export default {
   },
   asyncData (context) {
     console.log(context)
-    return context.$axios.$get(`https://ip-ranges.amazonaws.com/ip-ranges.jsonnnnnnn`)
+    return context.$axios.$get(`https://ip-ranges.amazonaws.com/ip-ranges.json`)
       .then((res) => {
         console.log(res.prefixes)
         return {
@@ -37,6 +37,7 @@ export default {
         }
       })
       .catch((e) => {
+        // errorページを表示する
         // this.errorに値を渡せる
         // ユースケースとしてはerror.vueで表示に使う
         context.error({ statusCode: 400, message: 'ページが見つかりません' })
