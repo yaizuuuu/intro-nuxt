@@ -46,6 +46,7 @@ export default {
   modules: [
     '@nuxtjs/axios',
     // '@nuxtjs/proxy',
+    '~/modules/simple',
   ],
   // proxy: {
   //   '/api': 'https://ip-ranges.amazonaws.com/ip-ranges.json',
